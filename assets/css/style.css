@@ -2,6 +2,17 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+:root{
+  --primary-color: #fff;
+  --font-title: " Alfa Slab One";
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 header {
@@ -32,7 +43,7 @@ h1 {
   flex-shrink: 0;
   color: #fde723;
   text-shadow: 8px 8px 6px rgba(253, 231, 35, 0.44);
-  font-family: Alfa Slab One;
+  font-family: var(--font-title);
   font-size: 3rem;
   font-style: normal;
   font-weight: 400;
@@ -40,26 +51,59 @@ h1 {
 }
 
 h2 {
-  color: #fff;
-  font-family: Alfa Slab One;
+  color: var(--primary-color);
+  font-family: var(--font-title);
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: 8.75rem;
   padding-left: 3.56rem;
 }
-
-h3 {
+header p{
+  max-width: 40%;
+}
+p {
   position: absolute;
   left: 6rem;
   width: 600px;
-  color: #fff;
-  font-family: Tiro Bangla;
+  color: var(--primary-color);
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  align-items: flex-end;
 }
+
+h3{
+  color: black;
+  align-items: flex;
+  position: relative;
+  gap: 1rem;
+  
+}
+#secao{
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: 25vh;
+  padding: 6rem;
+  gap: 5rem;
+}
+#secao img{
+  
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+}
+#secao div{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  
+ 
+  max-width: 40%;
+}
+
 .botao {
   position: absolute;
   bottom: 13rem;
