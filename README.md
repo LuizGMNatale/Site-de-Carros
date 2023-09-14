@@ -4,8 +4,8 @@ site de carros. protejo de PW
 ## Tarefas
 
 - [x] Header
-- [] Apresentação
-- [] Projetos
-- [] Orçamento
+- [x] Apresentação
+- [x] Projetos
+- [x] Orçamento
 - [] Menu
 - [] Responsividade
