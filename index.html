@@ -5,31 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2P Veículos</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js"></script>
   </head>
   <body>
-    <header>
-      <h1>2P Veículos</h1>
-      <h2>Quem somos</h2>
+    <header class="barra">
+      <div class="logo">
+        <img src="./assets/images/Carro-logo.png" alt="">
+        <h1>LA Importados</h1>
+      </div>
+        <nav>
+          <ul class="list-menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#secao">VEÍCULOS</a></li>
+            <li><a href="#secao-cadastro">CONTATO</a></li>
+          </ul>
+        </nav>
+      
+    </header>
+    <section class="first-section">
+      <div class="conteudo-principal">
+        <h2>Quem somos</h2>
         <p class="texto-sobre"> A 2 P Veiculos nasceu através do desejo de seu fundador de oferecer qualidade para seu cliente desde os veículos 
           finamente selecionados até o atendimento personalizado para os mais exigentes perfis. Acreditamos na transparência para trazer
            segurança a nossos clientes. Procedência, garantia e todo o suporte estão presentes antes, durante e depois da negociação.
            Nosso objetivo é fidelizar através de um processo de compra seguro
            e assertivo, unindo o desejo a nosso vasto conhecimento e experiência
            no setor automotivo dentro das maiores marcas premium mundiais.</p>
-           <div class="botao-veiculos">
-             <a href="#secao", class="botao" >Confira nossos veículos</a>
            </div>
-    </header>
+      </div>
+    </section>
 
     
     <section  class="catalog"  id ="secao">
       <div class="content">
         <div class="filter-card">
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Escolha seu modelo"
-          />
+          <input id="search-input" type="text" class="search-input" placeholder="Escolha seu modelo"/>
           <button class="search-button">Search</button>
         </div>
         <div class="card-wrapper">
@@ -137,7 +147,7 @@
 
 
     <section id="secao-cadastro">
-      <h1>Contato</h1>
+      <h1 class="Contato">Contato</h1>
       <form action="" id="form-cadastro">
         <div class="campo linha">
           <label for="nome">nome</label>

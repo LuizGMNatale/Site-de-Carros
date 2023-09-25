@@ -5,6 +5,8 @@
   box-sizing: border-box;
   padding: 0;
   list-style: none;
+  border: none;
+  text-decoration: none ;
 }
 
 :root{
@@ -14,53 +16,82 @@
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-header {
-  height: 100vh;
-  position: relative;
-  padding-left: 2rem;
-  padding-top: 2rem;
-  overflow: hidden;
+.barra{
+width: 100vw;
+height: 70px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+background-color: #1f1e1f;
+position: fixed;
 }
 
-/* pseudo-elemento não existe enquanto nao tiver conteudo */
-header::before {
-  content: "";
-  background-image: url("../images/backdrop.png");
-  background-size: cover;
+.logo{
+  width: 70px;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h1{
+  color: white;
+  font-size: 1.6rem;
+}
+
+.logo img{
   height: 100%;
   width: 100%;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
+  
 }
 
-h1 {
-  width: 307px;
-  height: 65px;
-  flex-shrink: 0;
-  color: #fde723;
-  text-shadow: 8px 8px 6px rgba(253, 231, 35, 0.44);
-  font-family: var(--font-title);
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-align: center;
+.first-section{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8) ) ,url("../images/possivel_fundo_sem_logo.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-position-y: 50px ;
+  
 }
 
+.conteudo-principal{
+  margin-top: 5rem;
+}
+
+.barra .list-menu{
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.barra .list-menu li a{
+  padding: 2rem 1rem 1rem 1rem;
+  color: white;
+  font-weight: 500;
+  transition: all 200ms ease-in;
+}
+.barra .list-menu li a:hover{
+  background-color: #3333;
+  border-bottom: 3px solid white;
+}
 
 h2 {
-  color: var(--primary-color);
+  color: whitesmoke;
   font-family: var(--font-title);
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: 8.75rem;
-  padding-left: 3.56rem;
+  padding-left: 3rem;
 }
 
 header p{
@@ -68,11 +99,10 @@ header p{
 }
 
 .texto-sobre{
-  position:absolute;
-  left: 5rem;
+  padding-left: 4rem;
   width: 600px;
-  color: var(--primary-color);
-  font-size: 1rem;
+  color: whitesmoke;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -88,20 +118,8 @@ h3{
 }
 
 #secao{
-  background-color: #252739;
+  background-color: white;
 }
-
-.botao {
-  position: absolute;
-  bottom: 13rem;
-  left: 38rem;
-  padding: 12px 21px;
-  text-decoration: none;
-  border-radius: 10px;
-  background: #fde723;
-  color: black;
-}
-
 
  /* Product Catalog */
 
@@ -112,7 +130,8 @@ h3{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   section .catalog {
@@ -123,7 +142,7 @@ h3{
   section .filter-card {
     width: 980px;
     height: 150px;
-    background: #fde723;
+    background: #e1e1e4;
     border-radius: 8px;
     margin: 0 auto;
     display: flex;
@@ -143,18 +162,19 @@ h3{
   .search-button {
     width: 150px;
     height: 50px;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 4px;
     border: none;
-    background: black;
+    background: #00285F;
     color: white;
     cursor: pointer;
+    font-weight: bold ;
     font-size: 1.1em;
-    transition: 0.2s ease;
+    transition: 0.5s ease;
   }
 
   .search-button:hover {
-    background: #dedede;
-    color: var(--blue);
+    background: #adadbc;
+    color: black;
   }
   
   .title-wrapper-catalog {
@@ -173,7 +193,7 @@ h3{
   
   section .card-item {
     height: 500px;
-    background: grey;
+    background: #e1e1e4;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -196,19 +216,20 @@ h3{
   
   .card-item h3 {
     width: 90%;
-    color: var(--primary-color);
+    color: black;
+    font-weight: bold;
   }
   
   .card-item p {
     width: 90%;
-    color: var(--primary-color);
+    color: rgb(48, 48, 48);
   }
   
   .card-item button {
     width: 90%;
     padding: 15px 0px;
     border: none;
-    background: blue;
+    background: #00285F;
     border-radius: 4px;
     color: white;
     font-weight: bold;
@@ -219,8 +240,8 @@ h3{
   }
   
   .card-item button:hover {
-    background: #dedede;
-    color: yellow;
+    background: #adadbc;
+    color: black;
   }
 
 
@@ -235,22 +256,34 @@ h3{
 
 
 #secao-cadastro{
- background-color: #252739;
+ background-color: whitesmoke;
   height: 100vh;
   padding: 3rem;
+}
+
+.Contato {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 8rem;
+  display: flex;
+  color:black;
+  font-family: var(--font-title);
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
 }
 
 #form-cadastro{
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 1rem;
-background-color: #e0dfe4;
+background-color: #e1e1e4;
 max-width: 500px;
 border-radius: .5rem;
 padding: 2rem;
 margin: 2rem auto;
 }
-
 .campo{
 display: flex;
 flex-direction: column;
