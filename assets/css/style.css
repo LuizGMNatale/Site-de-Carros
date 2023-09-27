@@ -225,7 +225,7 @@ h3{
     color: rgb(48, 48, 48);
   }
   
-  .card-item button {
+  .card-item a {
     width: 90%;
     padding: 15px 0px;
     border: none;
@@ -237,12 +237,17 @@ h3{
     cursor: pointer;
     transition: 0.3s ease;
     margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
   
-  .card-item button:hover {
+  .card-item a:hover {
     background: #adadbc;
     color: black;
   }
+
 
 
 #secao img{
