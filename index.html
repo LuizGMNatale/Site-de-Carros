@@ -148,24 +148,20 @@
 
     <section id="secao-cadastro">
       <h1 class="Contato">Contato</h1>
-      <form action="" id="form-cadastro">
-        <div class="campo linha">
+      <div class="formulario">
+        <form action="" id="form-cadastro">
           <label for="nome">nome</label>
-          <input type="text" id="nome">
-      </div>
-      <div class="campo">
+          <input type="text" id="nome" required>
         <label for="telefone">telefone</label>
-        <input type="tel" id="numero">
-      </div>
-      <div class="campo">
+        <input type="text" id="numero" required>
         <label for="email">email</label>
-        <input type="mail" id="email">
-      </div>
-      <div class="campo linha">
+        <input type="mail" id="email" required>
         <label for="mensagem" >mensagem</label> 
-        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
-    </div>
+        <textarea name="mensagem" id="mensagem" rows="10"></textarea>
+        <button type="submit">Enviar</button>
       </form>
+      </div>
+     
     </section>
   </body>
 </html>
